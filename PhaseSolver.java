@@ -34,9 +34,25 @@ public class PhraseSolver
     {
       
       /* your code here - game logic */
-      currentPlayer = player1;  // set the current player to Player 1
-      Scanner guess = new Scanner(System.in);       // prompt the current player for a guess
-      System.out.print("Would you like to guess a, a letter or b, a phrase");
+      
+      
+      currentPlayer ==1;  // set the current player to Player 1
+          // prompt the current player for a guess
+      System.out.print("Would you like to guess a letter (a) or the phrase (b)");
+      String choice = input.nextLine();
+      if (choice.equals("a"))
+      {
+        System.out.println("What letter would you like to choose?");
+      }
+      else
+      {
+        System.out.println("What do you think the phrase is?")
+      }
+    
+    
+    
+    
+    
 
       /* your code here - determine how game ends */
       solved = true; 
