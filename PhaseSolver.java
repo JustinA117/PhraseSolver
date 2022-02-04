@@ -37,7 +37,6 @@ public class PhraseSolver
     {   
       game.setLetterValue();
       // prompt the current player for a guess
-      System.out.println(game.getPhrase()); // delete this when game is complete
       System.out.println(game.getSolvedPhrase());
       
       //check to see current player and prompt for their name
@@ -59,11 +58,11 @@ public class PhraseSolver
         System.out.println("What letter would you like to choose?");
         String letter = input.nextLine();
         for (int i = 0; i < game.getPhrase().length(); i++){
-            if (letter.equals(game.getPhrase().substring(i, i + 1)))
+            if (letter.equals(game.getPhrase().substring(i, i + 1))) // this checks to see if the letter the player chose is in the phrase
         {
           System.out.println("That letter is correct");
           
-          int letterValue= game.getLetterValue();
+          int letterValue= game.getLetterValue(); // randomizes the amount of points a player gets
 
           if (currentPlayer == 1) // Add the points to current player 
       {
@@ -116,7 +115,7 @@ else if (player1.getPoints() < player2.getPoints()){
 }
 else
 {
-  System.out.println("You guys tied");
+  System.out.println("You guys tied"); // this else statement is in case both player's points are tied
 }
   }
  
